@@ -32,7 +32,7 @@ Please, read the following steps how to contribute.
  - Commit your changes in that branch, writing the code following the
    [OCA Guidelines][2]
 
- - Open a pull request. Write a good description and
+ - Open a pull request in 11.0 branch. Write a good description and
    title, so everybody will know what is fixed/improved.
 
  - After we'll review them. Finally, your contribution will be merged.
