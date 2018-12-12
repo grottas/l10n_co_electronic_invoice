@@ -2,9 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=========================
-DIAN - Electronic invoice
-=========================q
+==========================
+l10n_co_electronic_invoice
+==========================
+
+Electronic invoice for Colombia localization
 
 This module allows to send electronic invoices to DIAN
 
