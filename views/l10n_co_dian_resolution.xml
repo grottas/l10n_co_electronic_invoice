@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="l10n_co_dian_resolution_tree" model="ir.ui.view">
+        <field name="name">l10n.co.dian.resolution.tree</field>
+        <field name="model">l10n.co.dian.resolution</field>
+        <field name="arch" type="xml">
+            <tree string="DIAN - Resolutions">
+                <field name="name"/>
+                <field name="company_id"/>
+                <field name="document_type"/>
+                <field name="resolution_number"/>
+                <field name="technical_key"/>
+                <field name="prefix"/>
+                <field name="range_from"/>
+                <field name="range_to"/>
+                <field name="next_number"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="l10n_co_dian_resolution_form" model="ir.ui.view">
+        <field name="name">l10n.co.dian.resolution.form</field>
+        <field name="model">l10n.co.dian.resolution</field>
+        <field name="arch" type="xml">
+            <form string="DIAN - Resolutions">
+                <group>
+                    <field name="name"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="document_type"/>
+                    <field name="resolution_number"/>
+                    <field name="technical_key"/>
+                    <field name="prefix"/>
+                    <field name="range_from"/>
+                    <field name="range_to"/>
+                    <field name="next_number"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="active"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_co_dian_resolution_search" model="ir.ui.view">
+            <field name="name">l10n.co.dian.resolution.search</field>
+            <field name="model">l10n.co.dian.resolution</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="resolution_number"/>
+                    <field name="technical_key"/>
+                    <field name="document_type"/>
+                </search>
+            </field>
+        </record>
+
+    <record id="action_l10n_co_dian_resolution" model="ir.actions.act_window">
+        <field name="name">DIAN - Resolutions</field>
+        <field name="res_model">l10n.co.dian.resolution</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="l10n_co_dian_resolution_tree"/>
+    </record>
+
+
+    <menuitem action="action_l10n_co_dian_resolution"
+              name="DIAN - Resolutions"
+              id="l10n_co_dian_resolution"
+              parent="account.menu_finance_configuration"/>
+
+</odoo>
