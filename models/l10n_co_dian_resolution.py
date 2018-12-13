@@ -22,3 +22,5 @@ class L10nCoDianResolution(models.Model):
     start_date = fields.Date('Start Date', required=True)
     end_date = fields.Date('End Date', required=True)
     active = fields.Boolean('Active', default=True)
+    journal_id = fields.Many2one('account.journal', 'Journal',
+                                 ondelete='cascade')

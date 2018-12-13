@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="account_journal_dian_inherit" model="ir.ui.view">
+            <field name="name">account.journal.dian.inherit</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="DIAN - Resolutions">
+                        <group>
+                            <field name="l10n_co_journal_resolution_ids" nolabel="1" options="{'no_create': True}"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="journal_dian_resolutions_tree" model="ir.ui.view">
+            <field name="name">Journal Dian Resolutions Tree</field>
+            <field name="model">account.journal.dian.resolutions</field>
+            <field name="arch" type="xml">
+                <tree string="Journal Dian Resolutions" editable="top">
+                    <field name="l10n_co_dian_resolution_id"/>
+                    <field name="journal_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="journal_dian_resolutions_form" model="ir.ui.view">
+            <field name="name">Journal Dian Resolutions Form</field>
+            <field name="model">account.journal.dian.resolutions</field>
+            <field name="arch" type="xml">
+                <form string="Journal Dian Resolutions">
+                    <group>
+                        <field name="l10n_co_dian_resolution_id"/>
+                        <field name="journal_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
