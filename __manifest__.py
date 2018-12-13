@@ -18,6 +18,7 @@
 
     ],
     'data': [
+        'views/account_invoice.xml',
         'views/account_journal.xml',
         'views/l10n_co_dian_resolution.xml',
         'views/l10n_co_electronic_invoice.xml',
