@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
                 <page string="Electronic Invoice">
-                    <field name="l10n_co_invoice_electronic_ids" />
+                    <field name="l10n_co_invoice_electronic_ids" nolabel="1" options="{'no_create': True}"/>
                 </page>
             </xpath>
         </field>

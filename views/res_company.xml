@@ -8,8 +8,11 @@
             <field name="inherit_id" ref="base.view_company_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//notebook" position="inside">
-                    <page string="DIAN - Electronic Invoice">
-                        <group>
+                    <page string="DIAN - Electronic Invoice" name="dian">
+                        <group name="dian_enabled">
+                            <field name="l10n_co_dian_enabled"/>
+                        </group>
+                        <group string="Config" name="dian_config" attrs="{'invisible': [('l10n_co_dian_enabled', '=', False)]}">
                             <field name="l10n_co_dian_id"/>
                             <field name="l10n_co_software_id"/>
                             <field name="l10n_co_pin"/>

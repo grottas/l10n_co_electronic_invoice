@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <tree string="DIAN - Electronic Invoice">
                 <field name="invoice_id"/>
+                <field name="company_id"/>
                 <field name="send_date"/>
                 <field name="request_send"/>
                 <field name="response_code"/>
@@ -22,14 +23,21 @@
         <field name="model">l10n.co.electronic.invoice</field>
         <field name="arch" type="xml">
             <form string="DIAN - Electronic Invoice">
-                <group>
-                    <field name="invoice_id"/>
+                <group string="Invoice Data">
+                    <field name="invoice_id" />
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                </group>
+                <group string="Request Data">
                     <field name="send_date"/>
                     <field name="request_send"/>
+                </group>
+                <group string="Response Data">
                     <field name="response_code"/>
+                </group>
+                <group string="Validation Data">
                     <field name="validation_date"/>
-                    <field name="validation_response"/>
                     <field name="validation_response_code"/>
+                    <field name="validation_response"/>
                 </group>
             </form>
         </field>

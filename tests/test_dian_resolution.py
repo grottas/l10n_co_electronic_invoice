@@ -7,6 +7,8 @@ from odoo.exceptions import UserError
 class TestL10nCoDianResolution(TransactionCase):
 
     def setUp(self):
+        super(TestL10nCoDianResolution, self).setUp()
+
         self.dian_resolution = self.env.ref('l10n.co.dian.resolution')
         self.resolution_fe = self.dian_resolution.create({
             'name': 'Resolution FE',

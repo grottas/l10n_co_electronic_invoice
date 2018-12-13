@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright <2018> <svazquez@netquest.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
@@ -18,6 +17,8 @@
 
     ],
     'data': [
+        'security/ir.model.access.csv',
+        'data/account_tax_group_data.xml',
         'views/account_invoice.xml',
         'views/account_journal.xml',
         'views/l10n_co_dian_resolution.xml',

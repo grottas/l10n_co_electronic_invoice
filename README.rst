@@ -1,6 +1,15 @@
+.. image:: https://travis-ci.org/svazquezco/l10n_co_electronic_invoice.svg?branch=11.0
+   :target: https://travis-ci.org/svazquezco/l10n_co_electronic_invoice
+   :alt: Build Status
+
+.. image:: https://coveralls.io/repos/github/svazquezco/l10n_co_electronic_invoice/badge.svg
+   :target: https://coveralls.io/github/svazquezco/l10n_co_electronic_invoice
+   :alt: Coverage Status
+
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
+
 
 ==========================
 l10n_co_electronic_invoice
