@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="res_company_dian_inherit" model="ir.ui.view">
+            <field name="name">res.company.dian.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="DIAN - Electronic Invoice">
+                        <group>
+                            <field name="l10n_co_dian_id"/>
+                            <field name="l10n_co_software_id"/>
+                            <field name="l10n_co_pin"/>
+                            <field name="l10n_co_password" password="True"/>
+                            <field name="l10n_co_service_provider"/>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
