@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="l10n_co_electronic_invoice_tree" model="ir.ui.view">
+        <field name="name">l10n.co.electronic.invoice.tree</field>
+        <field name="model">l10n.co.electronic.invoice</field>
+        <field name="arch" type="xml">
+            <tree string="DIAN - Electronic Invoice">
+                <field name="invoice_id"/>
+                <field name="send_date"/>
+                <field name="request_send"/>
+                <field name="response_code"/>
+                <field name="validation_date"/>
+                <field name="validation_response"/>
+                <field name="validation_response_code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="l10n_co_electronic_invoice_form" model="ir.ui.view">
+        <field name="name">l10n.co.electronic.invoice.form</field>
+        <field name="model">l10n.co.electronic.invoice</field>
+        <field name="arch" type="xml">
+            <form string="DIAN - Electronic Invoice">
+                <group>
+                    <field name="invoice_id"/>
+                    <field name="send_date"/>
+                    <field name="request_send"/>
+                    <field name="response_code"/>
+                    <field name="validation_date"/>
+                    <field name="validation_response"/>
+                    <field name="validation_response_code"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_co_electronic_invoice_search" model="ir.ui.view">
+            <field name="name">l10n.co.electronic.invoice.search</field>
+            <field name="model">l10n.co.electronic.invoice</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="invoice_id"/>
+                </search>
+            </field>
+        </record>
+
+    <record id="action_l10n_co_electronic_invoice" model="ir.actions.act_window">
+        <field name="name">DIAN - Electronic Invoice</field>
+        <field name="res_model">l10n.co.electronic.invoice</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="l10n_co_electronic_invoice_tree"/>
+    </record>
+
+
+    <menuitem action="action_l10n_co_electronic_invoice"
+              name="DIAN - Electronic Invoice"
+              id="l10n_co_electronic_invoice"
+              parent="account.menu_finance_configuration"/>
+
+</odoo>
