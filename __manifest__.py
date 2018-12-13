@@ -17,6 +17,7 @@
 
     ],
     'data': [
+        'views/l10n_co_dian_resolution.xml',
 
     ],
     'installable': True
